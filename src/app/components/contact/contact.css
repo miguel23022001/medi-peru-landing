@@ -1,0 +1,8 @@
+:host{display:block}
+.page.contact{padding:2rem 1rem}
+.wrap{max-width:820px;margin:0 auto}
+.contact-form{display:flex;flex-direction:column;gap:.6rem;margin-top:1rem}
+.contact-form label{display:flex;flex-direction:column;color:#374151}
+.contact-form input,.contact-form textarea{padding:.6rem;border-radius:8px;border:1px solid rgba(15,23,42,0.06)}
+.contact-form textarea{min-height:120px}
+.btn.primary{background:linear-gradient(90deg,#2563eb,#1e40af);color:#fff;border:none;padding:.6rem 1rem;border-radius:8px}

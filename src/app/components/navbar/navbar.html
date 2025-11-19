@@ -26,40 +26,41 @@
     >
       <a
         class="nav-link"
-        href="#"
         role="menuitem"
-        (click)="select('inicio'); closeMenu(); $event.preventDefault()"
-        [class.active]="selected() === 'inicio'"
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
       >
         Inicio
       </a>
 
       <a
         class="nav-link"
-        href="#"
         role="menuitem"
-        (click)="select('servicios'); closeMenu(); $event.preventDefault()"
-        [class.active]="selected() === 'servicios'"
+        routerLink="/servicios"
+        routerLinkActive="active"
+        (click)="closeMenu()"
       >
         Servicios
       </a>
 
       <a
         class="nav-link"
-        href="#"
         role="menuitem"
-        (click)="select('nosotros'); closeMenu(); $event.preventDefault()"
-        [class.active]="selected() === 'nosotros'"
+        routerLink="/nosotros"
+        routerLinkActive="active"
+        (click)="closeMenu()"
       >
         Nosotros
       </a>
 
       <a
         class="nav-link"
-        href="#"
         role="menuitem"
-        (click)="select('contacto'); closeMenu(); $event.preventDefault()"
-        [class.active]="selected() === 'contacto'"
+        routerLink="/contacto"
+        routerLinkActive="active"
+        (click)="closeMenu()"
       >
         Contacto
       </a>
