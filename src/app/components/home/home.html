@@ -1,32 +1,29 @@
 <section class="home-hero">
-  <div class="hero-inner">
-    <div class="hero-text">
-      <h1>Bienvenido a MEDI PERU</h1>
-      <p class="lead">Encuentra profesionales de la salud certificados, reserva citas y accede a servicios confiables.</p>
-
+  <div class="hero-top">
+    <div class="hero-left">
+      <h1>MEDI-PERÚ: Tu Salud, Tu Información.</h1>
+      <p class="lead">Plataforma para encontrar atención médica confiable y profesionales verificados en Perú.</p>
       <div class="hero-ctas">
-        <a class="btn primary" href="#">Buscar Médico</a>
-        <a class="btn ghost" href="#">Ver Servicios</a>
+        <a class="btn primary" routerLink="/servicios">Buscar Médico Ahora</a>
       </div>
     </div>
 
-    <div class="hero-visual" aria-hidden="true">
-      <div class="phone-mock"></div>
+    <div class="hero-right">
+      <img src="/assets/hero-people.png" alt="personas" />
     </div>
   </div>
 
-  <div class="features">
-    <div class="feature">
-      <h3>Profesionales verificados</h3>
-      <p>Revisa credenciales y opiniones antes de reservar.</p>
+  <div class="search-map">
+    <div class="search-column">
+      <div class="search-card">
+        <app-search-bar (search)="onSearch($event)"></app-search-bar>
+        <app-filters-panel (filtersChange)="onFiltersChange($event)"></app-filters-panel>
+      </div>
     </div>
-    <div class="feature">
-      <h3>Reservas fáciles</h3>
-      <p>Agenda online en pocos pasos y recibe confirmación inmediata.</p>
-    </div>
-    <div class="feature">
-      <h3>Atención rápida</h3>
-      <p>Encuentra atención disponible cerca a ti cuando la necesitas.</p>
+    <div class="map-column">
+      <app-map-view [query]="query()" [filters]="filters()"></app-map-view>
     </div>
   </div>
 </section>
+
+<app-whatsapp-fab></app-whatsapp-fab>
