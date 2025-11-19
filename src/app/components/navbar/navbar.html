@@ -1,0 +1,68 @@
+<nav class="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container">
+    <!-- Logo -->
+    <a class="logo" href="#" aria-label="MEDI Peru">
+      <span class="logo-mark" aria-hidden="true"></span>
+      <span class="brand">MEDI PERU</span>
+    </a>
+
+    <!-- Botón hamburguesa (solo se verá en móvil por CSS) -->
+    <button
+      type="button"
+      class="menu-toggle"
+      aria-label="Abrir menú"
+      [attr.aria-expanded]="isMenuOpen"
+      (click)="toggleMenu()"
+    >
+      ☰
+    </button>
+
+    <!-- Links de navegación -->
+    <div
+      class="nav-links"
+      role="menubar"
+      aria-label="Main links"
+      [class.open]="isMenuOpen"
+    >
+      <a
+        class="nav-link"
+        href="#"
+        role="menuitem"
+        (click)="select('inicio'); closeMenu(); $event.preventDefault()"
+        [class.active]="selected() === 'inicio'"
+      >
+        Inicio
+      </a>
+
+      <a
+        class="nav-link"
+        href="#"
+        role="menuitem"
+        (click)="select('servicios'); closeMenu(); $event.preventDefault()"
+        [class.active]="selected() === 'servicios'"
+      >
+        Servicios
+      </a>
+
+      <a
+        class="nav-link"
+        href="#"
+        role="menuitem"
+        (click)="select('nosotros'); closeMenu(); $event.preventDefault()"
+        [class.active]="selected() === 'nosotros'"
+      >
+        Nosotros
+      </a>
+
+      <a
+        class="nav-link"
+        href="#"
+        role="menuitem"
+        (click)="select('contacto'); closeMenu(); $event.preventDefault()"
+        [class.active]="selected() === 'contacto'"
+      >
+        Contacto
+      </a>
+    </div>
+  </div>
+</nav>

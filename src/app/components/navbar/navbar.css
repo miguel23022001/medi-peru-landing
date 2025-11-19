@@ -1,0 +1,171 @@
+:host {
+  display: block;
+}
+
+/* === Barra principal === */
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 6px 18px rgba(12, 20, 30, 0.04);
+  background-color: #eeeeee; /* color hueso */
+  color: inherit;
+}
+
+/* Contenedor interno */
+.container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  height: var(--navbar-height, 64px);
+  gap: 1rem;
+  position: relative; /* para posicionar el menú desplegable en móvil */
+}
+
+/* Logo / marca */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo-mark {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.06),
+    rgba(255, 255, 255, 0.06)
+  );
+  box-shadow: inset 0 -4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.02rem;
+  font-size: 1.05rem;
+}
+
+/* Links de navegación (desktop por defecto) */
+.nav-links {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.nav-link {
+  color: #6b7280; /* gris/ploma */
+  text-decoration: none;
+  padding: 0.3rem 0.6rem 0.6rem 0.6rem; /* espacio extra abajo para la barra */
+  border-radius: 8px;
+  font-weight: 600;
+  transition:
+    background 160ms ease,
+    transform 120ms ease,
+    color 120ms ease;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-link:hover {
+  background: rgba(0, 0, 0, 0.03);
+  transform: translateY(-2px);
+}
+
+/* blue underline indicator */
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  margin-top: 6px;
+  border-radius: 2px;
+  background: #1e90ff; /* azul indicador */
+  transition: width 180ms ease;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Evitar saltos en una sola línea en desktop */
+.container,
+.nav-links {
+  flex-wrap: nowrap;
+}
+
+/* === Botón hamburguesa === */
+.menu-toggle {
+  display: none; /* oculto en desktop */
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+/* Tablet / móvil */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .brand {
+    font-size: 1rem;
+  }
+
+  /* Mostrar botón hamburguesa en móvil */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Menú pasa a ser panel desplegable */
+  .nav-links {
+    position: absolute;
+    top: var(--navbar-height, 64px);
+    left: 0;
+    right: 0;
+    background: #f5f5f5;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem 0.75rem;
+    gap: 0.25rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    display: none; /* cerrado por defecto */
+  }
+
+  /* Se abre cuando isMenuOpen = true (clase open) */
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-link {
+    width: 100%;
+    align-items: flex-start;
+    padding: 0.45rem 0.4rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Muy pequeño: se oculta el texto de la marca si no entra */
+@media (max-width: 520px) {
+  .brand {
+    display: none;
+  }
+}
