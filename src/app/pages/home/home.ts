@@ -1,9 +1,8 @@
 import { Component, signal } from '@angular/core';
-import { SearchBarComponent } from './search-bar';
-import { FiltersPanelComponent } from './filters-panel';
-import { MapViewComponent } from './map-view';
-import { ClinicsMapComponent } from '../clinics-map/clinics-map';
-import { WhatsappFabComponent } from './whatsapp-fab';
+import { SearchBarComponent } from '../../components/search-bar/search-bar';
+import { FiltersPanelComponent } from '../../components/filters-panel/filters-panel';
+import { ClinicsMapComponent } from '../../components/clinics-map/clinics-map';
+import { WhatsappFabComponent } from '../../components/whatsapp-fab/whatsapp-fab';
 
 @Component({
   selector: 'app-home',
