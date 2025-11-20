@@ -1,0 +1,4 @@
+<form class="search-bar" (submit)="$event.preventDefault(); onSearch()">
+    <input type="text" placeholder="Busca por especialidad, doctor o distrito" [(ngModel)]="query" name="q" />
+    <button class="btn" type="submit">Buscar</button>
+</form>
