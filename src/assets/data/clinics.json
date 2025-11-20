@@ -1,0 +1,63 @@
+[
+  {
+    "id": "c1",
+    "name": "Consultorio San Juan",
+    "address": "Av. Arequipa 123, Lima",
+    "lat": -12.1191,
+    "lng": -77.0349,
+    "doctors": [
+      { "name": "Dra. María Pérez", "specialty": "Cardiología", "phone": "+51 987654321" },
+      { "name": "Dr. Juan Ríos", "specialty": "Medicina General", "phone": "+51 912345678" }
+    ]
+  },
+  {
+    "id": "c2",
+    "name": "Centro Médico Arequipa",
+    "address": "Calle Mercaderes 45, Arequipa",
+    "lat": -16.3989,
+    "lng": -71.5350,
+    "doctors": [
+      { "name": "Dra. Lucía Quispe", "specialty": "Ginecología", "phone": "+51 945612378" }
+    ]
+  },
+  {
+    "id": "c3",
+    "name": "Clínica Cusco Salud",
+    "address": "Plaza Regocijo 10, Cusco",
+    "lat": -13.5319,
+    "lng": -71.9675,
+    "doctors": [
+      { "name": "Dr. Carlos Huamán", "specialty": "Traumatología", "phone": "+51 987001122" }
+    ]
+  },
+  {
+    "id": "c4",
+    "name": "Policlínico Trujillo",
+    "address": "Jr. Pizarro 200, Trujillo",
+    "lat": -8.1091,
+    "lng": -79.0215,
+    "doctors": [
+      { "name": "Dra. Ana Torres", "specialty": "Pediatría", "phone": "+51 976543210" }
+    ]
+  },
+  {
+    "id": "c5",
+    "name": "Salud Piura",
+    "address": "Av. Sánchez Cerro 88, Piura",
+    "lat": -5.1945,
+    "lng": -80.6328,
+    "doctors": [
+      { "name": "Dr. Marco Vega", "specialty": "Dermatología", "phone": "+51 999888777" }
+    ]
+  },
+  {
+    "id": "c6",
+    "name": "Clínica Iquitos",
+    "address": "Malecón Tarapacá 7, Iquitos",
+    "lat": -3.7437,
+    "lng": -73.2516,
+    "doctors": [
+      { "name": "Dra. Rosa Mendez", "specialty": "Infectología", "phone": "+51 945000111" }
+    ]
+  }
+]

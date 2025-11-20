@@ -1,0 +1,14 @@
+<div class="clinics-map-root">
+  <div class="map-area">
+    <div #mapRef class="map-canvas" aria-label="Mapa de consultorios"></div>
+  </div>
+  <aside class="list-area">
+    <h4>Consultorios</h4>
+    <ul class="clinic-list">
+      <li *ngFor="let c of clinics" (click)="focusClinic(c.id)" tabindex="0">
+        <strong>{{ c.name }}</strong>
+        <div class="addr">{{ c.address }}</div>
+      </li>
+    </ul>
+  </aside>
+</div>
