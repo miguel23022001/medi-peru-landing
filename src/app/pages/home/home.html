@@ -21,7 +21,14 @@
       </div>
     </div>
     <div class="map-column">
-      <app-clinics-map></app-clinics-map>
+      <div class="map-with-list" style="display:flex;gap:12px;">
+        <div style="flex:1">
+          <app-clinics-map #clinicsMap [clinics]="clinics() || []"></app-clinics-map>
+        </div>
+        <div style="width:320px">
+          <app-clinic-list [clinics]="clinics() || []" (selectClinic)="onClinicSelect($any($event))"></app-clinic-list>
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -1,0 +1,19 @@
+<div class="clinic-popup-root">
+  <h3>{{ clinic?.name }}</h3>
+  <div class="addr">{{ clinic?.address }}</div>
+
+  <ng-container *ngIf="clinic as c">
+    <ng-container *ngIf="c.doctors as doctors">
+      <div class="doctors" *ngIf="doctors.length > 0">
+        <strong>Médicos:</strong>
+        <ul>
+          <li *ngFor="let d of doctors">
+            <strong>{{ d.name }}</strong>
+            <span *ngIf="d.specialty"> — {{ d.specialty }}</span>
+            <div class="phone"><small>{{ d.phone }}</small></div>
+          </li>
+        </ul>
+      </div>
+    </ng-container>
+  </ng-container>
+</div>

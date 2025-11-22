@@ -1,0 +1,6 @@
+.clinic-list-root{padding:10px;background:#fff;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,0.06)}
+.clinic-list-root h4{margin:0 0 8px 0}
+.clinic-list-root ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px}
+.clinic-list-root li{padding:8px;border:1px solid #eee;border-radius:4px;cursor:pointer}
+.clinic-list-root li:focus{outline:2px solid #cfe9ff}
+.clinic-list-root .addr{font-size:13px;color:#666}

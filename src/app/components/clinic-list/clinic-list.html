@@ -1,0 +1,9 @@
+<aside class="clinic-list-root">
+  <h4>Consultorios</h4>
+  <ul>
+    <li *ngFor="let c of clinics" (click)="onSelect(c.id)" tabindex="0">
+      <strong>{{ c.name }}</strong>
+      <div class="addr">{{ c.address }}</div>
+    </li>
+  </ul>
+</aside>
